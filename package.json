@@ -1,0 +1,22 @@
+{
+  "name": "taskapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie": "^0.5.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.2",
+    "next": "13.4.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "sass": "^1.65.1"
+  }
+}
