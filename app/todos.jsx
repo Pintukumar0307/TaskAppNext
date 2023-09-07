@@ -27,7 +27,10 @@ const Todos = async () => {
 
   return (
     <section className="todosContainer">
-      {tasks?.map((i) => (
+      {tasks.length === 0 ? (
+          <p>No tasks</p>
+        ) : (
+      tasks?.map((i) => (
         <TodoItem
           title={i.title}
           description={i.description}
@@ -35,7 +38,7 @@ const Todos = async () => {
           key={i._id}
           completed={i.isCompleted}
         />
-      ))}
+      )))}
     </section>
   );
 };

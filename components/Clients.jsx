@@ -5,6 +5,7 @@ import { useState, createContext, useContext, useEffect } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
+
 export const Context = createContext({ user: {} });
 export const ContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
@@ -50,13 +51,15 @@ export const LogoutBtn = () => {
   };
 
   return user._id ? (
-    <button className="btn" onClick={logoutHandler}>
+  <button className="btn" onClick={logoutHandler}>
       Logout
     </button>
   ) : (
-    <Link href={"/login"}>Login</Link>
+    <Link style={{textDecoration:"none",color:"white"}}  href={"/login"}>Login</Link>
   );
 };
+
+// style={{textDecoration:"none",color:"white"}}
 
 export const TodoButton = ({ id, completed }) => {
   const router = useRouter();
@@ -96,7 +99,7 @@ export const TodoButton = ({ id, completed }) => {
         onChange={() => updateHandler(id)}
       />
       <button className="btn" onClick={() => deleteHandler(id)}>
-        Delete
+        -
       </button>
     </>
   );

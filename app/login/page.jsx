@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../../components/Clients";
 import { redirect } from "next/navigation";
 import { toast } from "react-hot-toast";
+import '../../style/login.css'
 
 const Page = () => {
   const [email, setEmail] = useState("");

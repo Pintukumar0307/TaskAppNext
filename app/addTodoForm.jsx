@@ -43,7 +43,7 @@ const AddTodoForm = () => {
   if (!user._id) return redirect("/login");
 
   return (
-    <div className="login">
+    <div>
       <section>
         <form onSubmit={submitHandler}>
           <input
